@@ -1,0 +1,84 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.container > p {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.answer {
+  border: 2px solid;
+  border-color: black;
+  padding: 30px;
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+/* Stopwach */
+.timer {
+  background-color: var(--electric-blue);
+  text-align: center;
+  line-height: 40px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.timer > p {
+  font-size: 25px;
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+}
+.control button {
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+/* Drawing */
+.geometris {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.part {
+  display: grid;
+  gap: 20px;
+}
+.square1 {
+  background-color: var(--bittersweet);
+  width: 100px;
+  height: 70px;
+}
+.square2 {
+  background-color: var(--rose-pink);
+  width: 100px;
+  height: 70px;
+  border-radius: 20%;
+}
+.tringale {
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-left: 100px solid var(--hunyadi-yellow);
+  border-bottom: 35px solid transparent;
+}
+.circle {
+  width: 100px;
+  height: 70px;
+  border-radius: 100%;
+  border: 3px solid var(--celeste);
+}
+.full {
+  background-color: var(--dark-cyan);
+  width: 100px;
+  height: 100%;
+  border-radius: 20px;
+}
+.rectangle {
+  background-color: var(--sgbus-green);
+  width: 100%;
+  height: 30px;
+}

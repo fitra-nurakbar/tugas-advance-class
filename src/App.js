@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import PageNotFound from "./pages/404";
+import Day2 from "./pages/Day-2";
+// import About from "./pages/About";
+// import AboutDetail from "./pages/About/Detail";
+// import Post from "./pages/Post";
+// import PostId from "./pages/Post/[id]";
+// import CreatePost from "./pages/Post/Create";
+// import EditPost from "./pages/Post/Edit";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/day-2" element={<Day2 />} />
+      {/* <Route path="/about" element={<About />}>
+        <Route path="detail" element={<AboutDetail />} />
+      </Route>
+      <Route path="/post" element={<Post />} />
+      <Route path="/post/:id" element={<PostId />} />
+      <Route path="/post/create" element={<CreatePost />} />
+      <Route path="/post/edit/:id" element={<EditPost />} /> */}
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   );
 }
 
