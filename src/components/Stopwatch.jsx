@@ -23,8 +23,11 @@ function Stopwatch() {
   };
 
   const resetTimer = () => {
-    setTimerTime(0);
-    clearInterval(timerRef.current);
+    if (timerOn) {
+      setTimerOn(false);
+      setTimerTime(0);
+      clearInterval(timerRef.current);
+    }
   };
 
   const seconds = Math.floor(timerTime / 1000) % 60;
