@@ -13,7 +13,11 @@ export default function Day2() {
           hanya saja sekarang tampilan berupa jam : menit : detik{" "}
         </p>
         <Stopwatch />
-        <p>2. Buat menggunakan html dan css dengan styling grid atau flexbox (tidak harus dengan React) untuk membentuk gambar di bawah ini. Link gambar:</p>
+        <p>
+          2. Buat menggunakan html dan css dengan styling grid atau flexbox
+          (tidak harus dengan React) untuk membentuk gambar di bawah ini. Link
+          gambar:
+        </p>
         <Drawing />
       </section>
     </Layout>

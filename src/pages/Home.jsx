@@ -9,6 +9,7 @@ export default function Home() {
       <section className={styles.container}>
         <h1>List tugas :</h1>
         <Link to={"/day-2"}>Day-2</Link>
+        <Link to={"/day-3"}>Day-3</Link>
       </section>
     </Layout>
   );
