@@ -95,7 +95,7 @@ export default function Day4() {
   };
 
   return (
-    <Layout title={"Day 3"}>
+    <Layout title={"Day 4"}>
       <section className={styles.container}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
