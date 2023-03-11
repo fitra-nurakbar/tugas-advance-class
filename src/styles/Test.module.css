@@ -1,0 +1,19 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container input {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.container > p {
+  margin-bottom: 10px;
+}
+.container li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}

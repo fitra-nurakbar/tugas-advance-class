@@ -10,6 +10,7 @@ export default function Home() {
         <h1>List tugas :</h1>
         <Link to={"/day-2"}>Day-2</Link>
         <Link to={"/day-3"}>Day-3</Link>
+        <Link to={"/day-4"}>Day-4</Link>
       </section>
     </Layout>
   );

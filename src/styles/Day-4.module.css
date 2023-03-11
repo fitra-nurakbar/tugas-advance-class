@@ -1,0 +1,45 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+.seacrhBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.zeroUser {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.zeroUser > h4 {
+  font-size: 200px;
+  font-weight: bold;
+  color: orange;
+  -webkit-text-stroke: 2px black;
+}
+.zeroUser > p {
+  color: red;
+  font-size: 80px;
+  font-style: italic;
+  font-family: serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.userList li {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.part {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.part:nth-of-type(2) {
+  align-items: center;
+}
