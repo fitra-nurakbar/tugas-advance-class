@@ -9,6 +9,7 @@ import ViewId from "./pages/Day-5/view/[id].jsx";
 import Hobby from "./pages/Hobby";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
+import Handler from "./pages/api/hello";
 
 const router = createBrowserRouter([
   // Root

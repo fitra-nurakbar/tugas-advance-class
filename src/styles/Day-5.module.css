@@ -24,8 +24,12 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+.userList li:nth-child(1) {
+  border-top: 2px solid black;
+}
 .userList li {
   border: 2px solid black;
+  border-top: none;
   padding: 10px;
   display: flex;
   justify-content: space-between;
