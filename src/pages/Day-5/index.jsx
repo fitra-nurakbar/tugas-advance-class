@@ -96,7 +96,7 @@ export default function Day5() {
                 ? result.map((user, index) => (
                     <li key={index}>
                       <div className={styles.part}>
-                        <h6>Name : {user.name}</h6>
+                        <p>Name : {user.name}</p>
                         <p>Address : {user.address}</p>
                       </div>
                       <div className={styles.part}>
@@ -134,7 +134,7 @@ export default function Day5() {
                 : data.map((user, index) => (
                     <li key={index}>
                       <div className={styles.part}>
-                        <h6>Name : {user.name}</h6>
+                        <p>Name : {user.name}</p>
                         <p>Address : {user.address}</p>
                       </div>
                       <div className={styles.part}>

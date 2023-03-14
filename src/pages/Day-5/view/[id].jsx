@@ -4,18 +4,22 @@ import Layout from "../../../components/Layout";
 import { data } from "../../../utils/data";
 import { Container } from "@mui/material";
 import Navbar from "../../../components/Navbar";
+import Card from "../../../components/Card";
 
 export default function ViewId() {
   const { id } = useParams();
 
   const user = data[id];
+
   return (
     <Layout title={"View ID"}>
       <Container maxWidth="md">
         <Navbar />
-        <div>{user.name}</div>
-        <div>{user.address}</div>
-        <div>{user.hobby}</div>
+        <Card>
+          <p>Name : {user.name}</p>
+          <p>Address : {user.address}</p>
+          <p>Hobby : {user.hobby}</p>
+        </Card>
       </Container>
     </Layout>
   );
