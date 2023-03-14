@@ -39,6 +39,7 @@ export default function Day4() {
   const handlerChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+
     if (edit) {
       setEdit({ ...edit, [name]: value });
     } else {
@@ -93,6 +94,13 @@ export default function Day4() {
       setResult(null);
     }
   };
+
+  const notUser = (
+    <div className={styles.zeroUser}>
+      <h4>o</h4>
+      <p>User</p>
+    </div>
+  );
 
   return (
     <Layout title={"Day 4"}>
@@ -243,10 +251,7 @@ export default function Day4() {
             </ul>
           </>
         ) : (
-          <div className={styles.zeroUser}>
-            <h4>o</h4>
-            <p>User</p>
-          </div>
+          notUser
         )}
       </section>
     </Layout>

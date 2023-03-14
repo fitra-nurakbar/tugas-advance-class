@@ -11,6 +11,7 @@ export default function Home() {
         <Link to={"/day-2"}>Day-2</Link>
         <Link to={"/day-3"}>Day-3</Link>
         <Link to={"/day-4"}>Day-4</Link>
+        <Link to={"/day-5"}>Day-5</Link>
       </section>
     </Layout>
   );
