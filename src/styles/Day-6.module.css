@@ -7,11 +7,18 @@
   flex-wrap: wrap;
   justify-content: center;
   max-width: 75%;
+  width: 100%;
   gap: 20px;
 }
 .part:nth-child(2) {
   display: flex;
   padding: 6rem 0;
+}
+.err {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {

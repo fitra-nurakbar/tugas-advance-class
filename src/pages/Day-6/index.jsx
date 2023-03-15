@@ -12,6 +12,7 @@ import Loading from "../../components/Loading";
 export default function Day6() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const getData = () => {
     setLoading(true);
@@ -26,6 +27,8 @@ export default function Day6() {
         setLoading(false);
       })
       .catch((error) => {
+        setError(true);
+        setLoading(false);
         console.log(error);
       });
   };
@@ -44,9 +47,15 @@ export default function Day6() {
           ) : (
             <>
               <div className={styles.part}>
-                {posts.map((post, index) => (
-                  <RecipeReviewCard key={index} data={post} />
-                ))}
+                {error ? (
+                  <div className={styles.err}>
+                    <h2>Failed to load data</h2>
+                  </div>
+                ) : (
+                  posts.map((post, index) => (
+                    <RecipeReviewCard key={index} data={post} />
+                  ))
+                )}
               </div>
               <div className={styles.part}>
                 <FolderList />

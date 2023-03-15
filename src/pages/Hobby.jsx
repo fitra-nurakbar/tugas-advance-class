@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
-import Border from "../components/Border"
+import Border from "../components/Border";
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 

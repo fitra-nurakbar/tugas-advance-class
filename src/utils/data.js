@@ -1,2 +1,2 @@
 export const data = [];
-export const urlMain = "http://localhost:3004/"
+export const urlMain = "http://localhost:3004/";
