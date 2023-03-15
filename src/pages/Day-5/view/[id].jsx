@@ -4,7 +4,7 @@ import Layout from "../../../components/Layout";
 import { data } from "../../../utils/data";
 import { Container } from "@mui/material";
 import Navbar from "../../../components/Navbar";
-import Card from "../../../components/Card";
+import Card from "../../../components/Border";
 
 export default function ViewId() {
   const { id } = useParams();

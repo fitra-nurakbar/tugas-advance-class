@@ -1,22 +1,8 @@
 .container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
-  background-color: gray;
+  padding: 10px;
 }
-
-.block {
-  width: 200px;
-  height: 200px;
-  background-color: skyblue;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: ease-in-out;
-  transition: 1s;
-}
-.block:hover {
-  transform: scale(0, 1);
+.container h1 {
+  font-size: large;
+  font-weight: bold;
+  margin: 20px 0px;
 }

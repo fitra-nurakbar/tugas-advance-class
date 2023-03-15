@@ -9,7 +9,7 @@ import ViewId from "./pages/Day-5/view/[id].jsx";
 import Hobby from "./pages/Hobby";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
-import Handler from "./pages/api/hello";
+import Day6 from "./pages/Day-6";
 
 const router = createBrowserRouter([
   // Root
@@ -49,9 +49,15 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
+  // Hobby
   {
     path: "/hobby",
     element: <Hobby />,
+  },
+  // Day 6
+  {
+    path: "/day-6",
+    element: <Day6 />,
   },
   // Test
   {

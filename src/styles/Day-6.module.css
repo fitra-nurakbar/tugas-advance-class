@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+}
+.part:nth-child(1) {
+  padding: 6rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 75%;
+  gap: 20px;
+}
+.part:nth-child(2) {
+  display: flex;
+  padding: 6rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .part:nth-child(1) {
+    max-width: 100%;
+  }
+  .part:nth-child(2) {
+    display: none;
+  }
+}

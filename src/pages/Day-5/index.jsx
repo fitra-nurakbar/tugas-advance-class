@@ -54,9 +54,9 @@ export default function Day5() {
 
   return (
     <Layout title={"Day 5"}>
-      <Container maxWidth="md">
-        {/* Navbar */}
-        <Navbar eventAdd={handlerAdd} />
+      {/* Navbar */}
+      <Navbar eventAdd={handlerAdd} />
+      <Container maxWidth="lg">
         {/* Form Modal */}
         <FormModal
           data={data}

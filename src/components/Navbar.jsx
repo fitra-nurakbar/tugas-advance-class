@@ -27,14 +27,14 @@ export default function Navbar(props) {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="md">
+    <AppBar position="fixed">
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component={Link}
-            to={{ pathname: `/day-5` }}
+            to={{ pathname: "" }}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -96,7 +96,7 @@ export default function Navbar(props) {
             variant="h5"
             noWrap
             component={Link}
-            to={{ pathname: `/day-5` }}
+            to={{ pathname: "" }}
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
