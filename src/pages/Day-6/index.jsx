@@ -1,69 +1,67 @@
-import React, { useEffect, useState } from "react";
+import { Box, CircularProgress, Container } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import React from "react";
+import RecipeReviewCard from "../../components/Card";
+import FolderList from "../../components/FolderList";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
-import { Container } from "@mui/material";
-import axios from "axios";
-import { urlMain } from "../../utils/data";
-import RecipeReviewCard from "../../components/Card";
+import useAsync from "../../components/useAsync";
 import styles from "../../styles/Day-6.module.css";
-import FolderList from "../../components/FolderList";
-import Loading from "../../components/Loading";
 
 export default function Day6() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  // Custom hook get API
+  const { loading, data, error } = useAsync(
+    process.env.REACT_APP_BASE_URL + "postgenerated"
+  );
 
-  const getData = () => {
-    setLoading(true);
-    axios(urlMain + "postgenerated", {
-      method: "GET",
-      header: {
-        "Content-Type": "Application/json",
+  let theme = createTheme({
+    palette: {
+      primary: {
+        main: process.env.REACT_APP_COLOR_PRIMARY,
       },
-    })
-      .then((response) => {
-        setPosts(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(true);
-        setLoading(false);
-        console.log(error);
-      });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
+      secondary: {
+        main: "#edf2ff",
+      },
+    },
+  });
 
   return (
     <Layout title={"Day 6"}>
-      <Navbar />
-      <Container maxWidth={"lg"} sx={{ height: "100vh" }}>
-        <div className={styles.container}>
-          {loading ? (
-            <Loading />
-          ) : (
-            <>
-              <div className={styles.part}>
-                {error ? (
-                  <div className={styles.err}>
-                    <h2>Failed to load data</h2>
-                  </div>
-                ) : (
-                  posts.map((post, index) => (
-                    <RecipeReviewCard key={index} data={post} />
-                  ))
-                )}
-              </div>
-              <div className={styles.part}>
-                <FolderList />
-              </div>
-            </>
-          )}
-        </div>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <Container maxWidth={"lg"} sx={{ height: "100vh" }}>
+          <div className={styles.container}>
+            <div className={styles.part}>
+              {loading ? (
+                <div className={styles.status}>
+                  <Box sx={{ display: "flex" }}>
+                    <CircularProgress />
+                  </Box>
+                  <h2>Loading...</h2>
+                </div>
+              ) : error ? (
+                <div className={styles.status}>
+                  <h2>Failed to load data</h2>
+                </div>
+              ) : (
+                data.map((post, index) => (
+                  // pharsing data props Card
+                  <RecipeReviewCard
+                    key={index}
+                    title={post.title}
+                    datePost={post.datePost}
+                    img={post.img}
+                    description={post.description}
+                  />
+                ))
+              )}
+            </div>
+            <div className={styles.part}>
+              <FolderList />
+            </div>
+          </div>
+        </Container>
+      </ThemeProvider>
     </Layout>
   );
 }

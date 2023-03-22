@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CustomButton from "./CustomButton";
 
 const pages = ["about", "hobby"];
@@ -33,8 +33,6 @@ export default function Navbar(props) {
           <Typography
             variant="h6"
             noWrap
-            component={Link}
-            to={{ pathname: "" }}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -95,8 +93,6 @@ export default function Navbar(props) {
           <Typography
             variant="h5"
             noWrap
-            component={Link}
-            to={{ pathname: "" }}
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },

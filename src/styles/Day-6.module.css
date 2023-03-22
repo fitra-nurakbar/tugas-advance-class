@@ -14,7 +14,7 @@
   display: flex;
   padding: 6rem 0;
 }
-.err {
+.status {
   width: max-content;
   display: flex;
   justify-content: center;
