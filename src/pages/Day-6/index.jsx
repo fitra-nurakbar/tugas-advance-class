@@ -10,9 +10,7 @@ import styles from "../../styles/Day-6.module.css";
 
 export default function Day6() {
   // Custom hook get API
-  const { loading, data, error } = useAsync(
-    process.env.REACT_APP_BASE_URL + "postgenerated"
-  );
+  const { loading, data, error } = useAsync(process.env.REACT_APP_BASE_URL);
 
   let theme = createTheme({
     palette: {

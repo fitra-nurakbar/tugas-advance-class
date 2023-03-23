@@ -12,7 +12,10 @@ import PropTypes from "prop-types";
 
 export default function RecipeReviewCard(props) {
   const { title, datePost, img, description } = props;
-  const initials = title.split(" ").map((word) => word.charAt(0).toUpperCase()).join("")
+  const initials = title
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase())
+    .join("");
 
   return (
     <Card sx={{ maxWidth: 345 }}>
