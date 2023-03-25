@@ -1,14 +1,23 @@
 import { Box, CircularProgress, Container } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import RecipeReviewCard from "../../components/Card";
 import FolderList from "../../components/FolderList";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
 import useAsync from "../../components/useAsync";
 import styles from "../../styles/Day-6.module.css";
+import { CommonContext } from "../../context/CommonContext";
 
 export default function Day6() {
+  const { updateCommonState } = useContext(CommonContext);
+
+  useEffect(() => {
+    updateCommonState({
+      title: "",
+      color: "",
+    });
+  }, [updateCommonState]);
   // Custom hook get API
   const { loading, data, error } = useAsync(process.env.REACT_APP_BASE_URL);
 

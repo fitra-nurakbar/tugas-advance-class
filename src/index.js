@@ -3,11 +3,17 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import Router from "./Router";
 import "./index.css";
+import StorageContext from "./context/StorageContext";
+import { CommonProvider } from "./context/CommonContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router />
+    <StorageContext>
+      <CommonProvider>
+        <Router />
+      </CommonProvider>
+    </StorageContext>
   </React.StrictMode>
 );
 

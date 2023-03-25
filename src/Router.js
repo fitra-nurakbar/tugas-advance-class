@@ -1,15 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageNotFound from "./pages/404";
 import About from "./pages/About";
+import Day12 from "./pages/Day-12";
 import Day2 from "./pages/Day-2";
 import Day3 from "./pages/Day-3";
 import Day4 from "./pages/Day-4";
 import Day5 from "./pages/Day-5";
 import ViewId from "./pages/Day-5/view/[id].jsx";
+import Day6 from "./pages/Day-6";
 import Hobby from "./pages/Hobby";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
-import Day6 from "./pages/Day-6";
 
 const router = createBrowserRouter([
   // Root
@@ -58,6 +59,12 @@ const router = createBrowserRouter([
   {
     path: "/day-6",
     element: <Day6 />,
+  },
+  {
+    path: "/day-12",
+    element: (
+        <Day12 />
+    ),
   },
   // Test
   {
